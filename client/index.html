@@ -3,6 +3,63 @@
   <head>
     <title>A Multiplayer Game</title>
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type='text/css' href="client/styles.css">
+  </head>
+  <body>
+    <div id="box1">
+      <div class="image" id="logo"></div>
+      <div class="c1" id="main">
+        <form id="form">
+          <input type="text" placeholder="Nickname" id="nickname" name="Nickname">
+          <input type="button" id="ctrls" onclick="ctrlsShowCss()" value="Controls">
+          <input type="button" id="startb" onclick="startCss(); game()" value="Play">
+          <input type="button" id="credits" onclick="creditsShowCss()" value="Credits">
+        </form>
+        <div id="ctrlspage">
+          <div id="ctrlshead">
+            C O N T R O L S
+          </div>
+          <div id="ctrlstxt">
+
+Move: WASD
+Aim: mouse
+Shoot: Left-click
+Rotate Screen: QE
+
+          </div>
+          <input type="button" id="ctrlsback" onclick="ctrlsBackCss()" value="Back">
+        </div>
+        <div id="creditspage">
+          <div id="creditshead">
+            C R E D I T S
+          </div>
+          <div id="creditstxt">
+
+Site Creators:
+Ashwanth Muruhathasan
+Sarthak Madan
+Sahith Konakalla
+
+          </div>
+          <input type="button" id="creditsback" onclick="creditsBackCss()" value="Back">
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas" width="1000" height="700" style="border:1px solid #000000;"></canvas>
+    <script src="/client/js/game.js"></script>
+    <script src="/client/js/pages.js"></script>
+  </body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Multiplayer Game</title>
+    <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
   	<form id="form">
